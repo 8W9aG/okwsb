@@ -3,3 +3,5 @@ numpy==1.19.5
 matplotlib==3.3.4
 opencv-python==4.5.1.48
 Pillow==7.2.0
+stable-baselines[mpi]==2.10.1
+tensorflow==1.15.0

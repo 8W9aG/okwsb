@@ -1,13 +1,16 @@
 """The main runner."""
 import gym
+from stable_baselines.common.env_checker import check_env
 
 from .stockenv import ENVIRONMENT_ID
 
 
 def main() -> None:
     """Run OKWSB."""
+    print("--- OKWSB ---")
     gym.envs.registration.register(id=ENVIRONMENT_ID, entry_point='okwsb:StockEnv') 
     env = gym.make(ENVIRONMENT_ID)
+    check_env(env)
     env.reset()
     for _ in range(1000):
         env.render()

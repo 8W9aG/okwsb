@@ -18,7 +18,7 @@ class StockEnv(gym.Env):
         """Initialise the stock environment."""
         self.action_space = gym.spaces.Discrete(5)
         self.observation_space = gym.spaces.Discrete(2)
-        self.state = []
+        self.state = 1
 
 
     def step(self, action):
@@ -34,7 +34,7 @@ class StockEnv(gym.Env):
 
     def reset(self):
         """Reset the state of the environment."""
-        self.state = []
+        self.state = 1
         return self.state
 
 
