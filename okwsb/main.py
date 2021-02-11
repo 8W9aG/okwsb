@@ -9,7 +9,7 @@ def main() -> None:
     """Run OKWSB."""
     print("--- OKWSB ---")
     gym.envs.registration.register(id=ENVIRONMENT_ID, entry_point='okwsb:StockEnv') 
-    env = gym.make(ENVIRONMENT_ID)
+    env = gym.make(ENVIRONMENT_ID, capital = 100000)
     check_env(env)
     env.reset()
     for _ in range(1000):
